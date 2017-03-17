@@ -7,6 +7,7 @@ export const fetchCheeses = () => {
     	if (!response.ok) { 
     		throw new Error(response.statusText); 
     	} 
+    	console.log(response);
     	return response.json();
     })
     .then(json => {
