@@ -20,15 +20,17 @@ componentDidMount() {
 
     render() {
         console.log(this.props.cheeses);
+        const cheeses = this.props.cheeses;
         return (
 
             <div className="cheese">
-            <h1> this better work </h1>
-             <ul>
-             {this.props.cheeses.map(cheese => {
-                <li> cheese </li>
-             }) }
-              </ul>
+            <h1> The  Cheese List </h1>
+
+             
+             {cheeses.map(function(cheese, index) {
+               return <li key={index}> {cheese} </li>
+             })}
+             
             </div>
         );
     }

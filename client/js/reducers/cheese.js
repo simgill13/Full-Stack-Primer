@@ -11,7 +11,7 @@ const initialState = {
     
 };
 
-export default (state = initialState, action) => {
+ const cheeseReducer = (state = initialState, action) => {
     switch(action.type) {
 
         case FETCH_CHEESES_REQUEST:
@@ -27,3 +27,5 @@ export default (state = initialState, action) => {
 
     return state;
 };
+
+export default cheeseReducer;
